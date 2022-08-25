@@ -1,0 +1,381 @@
+:root {
+    --verde: #1AB617;
+    --blanco: #ffffff;
+    --gris-claro: #f3f1f1;
+    --gris: #94a3b8;
+    --gris-oscuro: #2E2D2D;
+    --negro: rgb(34, 32, 32);
+}
+
+* {
+    /* Reseteo */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-size: 1.6rem;
+    font-family: "Rajdhani", sans-serif;
+    background-color: var(--blanco);
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/*Inicio*/
+.encabezado {
+    height: 100vh;
+    width: 100%;
+    background-image: url(/img/fondo.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.navegacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.navegacion a {
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.navegacion a:hover {
+    color: var(--gris);
+}
+
+.saludo {
+    height: 20rem;
+    width: 50%;
+    margin: 0 auto;
+    transform: translateY(60%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 0.5rem solid var(--verde);
+    border-top: 0.5rem solid var(--verde);
+}
+
+h1 {
+    font-weight: 500;
+    font-size: 3rem;
+    color: var(--blanco);
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .navegacion {
+        gap: 10rem;
+    }
+
+    h1 {
+        font-size: 5rem;
+    }
+}
+
+/*Sobre mi*/
+.sobre-mi {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    max-width: 90%;
+    gap: 5rem;
+}
+
+h2 {
+    font-weight: 300;
+    font-size: 2rem;
+}
+
+h3 {
+    width: 100%;
+    font-weight: 700;
+    font-size: 3rem;
+    text-transform: uppercase;
+    text-align: start;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.foto-personal {
+    width: 30rem;
+    
+}
+@media (min-width: 768px) {
+    .sobre-mi {
+        flex-direction: row;
+        margin-bottom: 10rem;
+        margin-top: 10rem;
+    }
+
+    .parrafo-sobremi {
+        width: 60%;
+    }
+
+    h2 {
+        font-weight: 300;
+        font-size: 2rem;
+    }
+
+    h3 {
+        width: 100%;
+        font-weight: 700;
+        font-size: 4.5rem;
+        text-transform: uppercase;
+        text-align: start;
+        margin-top: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    .foto-personal {
+        width: 40rem;
+    }
+}
+
+/*HABILIDADES*/
+
+.habilidades {
+    background-color: var(--gris-claro);
+    width: 100%;
+    gap: 0.5rem;
+    margin: 0 auto;
+    padding: 5rem;
+}
+
+.subtitulo-habilidades {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.sub-habilidades {
+    padding: 1rem;
+    font-weight: 500;
+    font-size: 3rem;
+    text-align: center;
+    text-transform: uppercase;
+    margin-left: 0rem;
+    margin-bottom: 3rem;
+
+}
+
+.sub-habilidades span {
+    font-weight: 300;
+    text-transform: lowercase;
+}
+
+.contenedor-habilidades {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.icono-habilidades {
+    width: 10rem;
+}
+
+@media (min-width: 768px) {
+
+
+
+    .sub-habilidades {
+        margin-left: 10;
+
+    }
+
+    .contenedor-habilidades {
+        width: 70%;
+        gap: 2rem;
+    }
+
+
+}
+
+@media (min-width: 1024px) {
+    .contenedor-habilidades {
+        width: 70%;
+        gap: 5rem;
+    }
+
+}
+
+@media (min-width: 1440px) {}
+
+
+
+
+/*trabajos*/
+/*renders*/
+.trabajos {
+    background-color: var(--gris-oscuro);
+    padding-top: 5rem;
+}
+
+.renders {
+    padding: 1rem;
+}
+
+.blanco {
+    color: var(--blanco);
+}
+
+.renders a {
+    color: var(--verde);
+    text-decoration: none;
+    font-weight: 300;
+}
+
+.imagenes {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+}
+
+.img {
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (min-width: 768px) {
+
+    .renders {
+        max-width: 70%;
+        margin: 0 auto;
+    }
+
+    .imagenes {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        gap: 1rem;
+    }
+
+    .imagen1 {
+        grid-row: 1/3;
+    }
+
+    .imagen4 {
+        grid-column: 3/4;
+        grid-row: 1/5;
+    }
+
+    .imagen5 {
+        grid-column: 2/3;
+        grid-row: 3/5;
+    }
+
+}
+
+/*WEBS*/
+.webs {
+    padding: 1rem;
+}
+
+.tarjetas-webs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tarjeta {
+    background-color: var(--gris-claro);
+    width: 49%;
+}
+
+.fondo-tarjeta {
+    width: 100%;
+    height: 10rem;
+    border-top: 0.3rem solid var(--verde);
+    border-bottom: 0.3rem solid var(--verde);
+    object-fit: cover;
+}
+
+.imagen-tarjeta {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.imagen-tarjeta img {
+    width: 2.5rem;
+}
+
+h6 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+
+    .webs {
+        margin: 0 auto;
+        max-width: 70%;
+
+    }
+
+    .subtitulo {
+        margin-top: 5rem;
+        margin-bottom: 15rem;
+        border-left: 0.5rem solid var(--verde);
+        padding: 1rem;
+    }
+
+
+    .tarjetas-webs {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+    .tarjeta {
+        width: 20%;
+    }
+
+    .fondo-tarjeta {
+        height: 25rem;
+    }
+
+    .fondo-tarjeta:hover {
+        opacity: 0.9;
+    }
+
+    .imagen-tarjeta img {
+        width: 4rem;
+    }
+
+    h6 {
+        font-weight: 300;
+        font-size: 3rem;
+    }
+}
